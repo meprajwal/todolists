@@ -7,12 +7,10 @@ This project is an inspiration of <a href = "https://todo.microsoft.com/tasks/">
 I will be doing this project prior to my knowledge and with the use of books, and other online forums.
 I will be re-editing this readme file whenever I get feel necessary to edit it..
 Feel free to fork and improve it.
+<br>
 Thanks,
-
-
-
-
-
+<br>
 Todos:
--> Add completed or not pending button or similar items.
+<br>
+-> Add completed or not pending button or similar items.<br>
 ->Multi Users.
