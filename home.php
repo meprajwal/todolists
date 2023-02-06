@@ -30,6 +30,11 @@ include('includes/header.php');
 </div>
 </nav>
 <a href="https://todolists.pacharya.com.np/index">Official</a>
-<script src = 'script.js' type="text/javascript"></script>
+<br><br><br><br><br><br>
+<center>
+<a href="changelog">Changelogs</a>
+</center>
+
+<script src = 'script.js?n=1' type="text/javascript"></script>
 
 <?php include ('includes/footer.php');?>

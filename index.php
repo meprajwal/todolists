@@ -1,8 +1,5 @@
 <?php 
-<<<<<<< HEAD
 ob_start();
-=======
->>>>>>> 1cf15372f5bbbe488720c82e6d4cabad692eb736
 include('code.php');
 $title = "ToDo Lists";
 include('includes/header.php');
@@ -76,7 +73,7 @@ Welcome, <?php echo $name; ?>
     <form action="code.php" method="post">
         
         
-        <div class="container rounded mx-auto shadow bg-light mt-5 mb-2">
+        <div id="navbar" class="container rounded mx-auto shadow bg-light mt-5 mb-2">
             <div class="row text-primary text-center">
                 <b>To-Do List</b>
             </div>
@@ -99,30 +96,34 @@ Welcome, <?php echo $name; ?>
             </div>
             
         </div>
-    </form>
-    <div class="tasks container rounded bg-light shadow table-responsive">
-        <table class = "table ">
-            <thead>
-                <tr class="table-active">
-                    <th>SN</th>
-                    <th>Tasks</th>
-                    <th>Status</th>
-                </tr>
-            </thead>
-<?php
-
+        </form>
+        <div class="tasks container rounded bg-light shadow table-responsive" id="tasklisttable">
+            <table class = "table ">
+                <thead>
+                    <tr id="tableheaders" class="table-active text-dark">
+                        <th>SN</th>
+                        <th>Tasks</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+    <?php
 $tasks= mysqli_query($conn, "SELECT * FROM todos");
 $loop = 1;
+
 while($row = mysqli_fetch_array($tasks))
 {
-?>
+
+    ?>
+
+
+<tbody id ="taskslists">
 <tr>
     <td>
         <?php echo $loop; ?>
     </td>
 
 
-    <td class="tasks">
+    <td class="tasks" >
         <?php echo $row['todo']; ?>
 
     </td>
@@ -131,7 +132,7 @@ while($row = mysqli_fetch_array($tasks))
         
 	</td>
 </tr>
-
+</tbody>
  
         
 
@@ -143,7 +144,7 @@ while($row = mysqli_fetch_array($tasks))
     
 
 
-    <script src = 'indexscript.js' type="text/javascript"></script>
+    <script src = 'indexscript.js?n=1' type="text/javascript"></script>
 
 <?php
 }else header("location:home");

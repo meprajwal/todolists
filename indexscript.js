@@ -13,19 +13,37 @@ toggle.addEventListener('click', function(){
         body.style.transition = '2s';
     }
 
-if ( document.getElementById("navbar").classList.contains('navbar-light') )
+if ( document.getElementById("navbar").classList.contains('bg-light') )
 {
-    document.getElementById("navbar").classList.remove('navbar-light');
-    document.getElementById("navbar").classList.remove('bg-primary');
-    document.getElementById("navbar").classList.add('navbar-dark');
+    document.getElementById("navbar").classList.remove('bg-light');
     document.getElementById("navbar").classList.add('bg-dark');
+
+
+    document.getElementById("tableheaders").classList.add('text-light');
+    document.getElementById("tableheaders").classList.remove('text-dark');
+
+    document.getElementById("tasklisttable").classList.add('bg-dark');
+    document.getElementById("tasklisttable").classList.remove('bg-light');
+
+    
+    document.getElementById("taskslists").classList.add('text-light');
+    document.getElementById("taskslists").classList.remove('text-dark');
+
 }
-else if( document.getElementById("navbar").classList.contains('navbar-dark') )
+else if( document.getElementById("navbar").classList.contains('bg-dark') )
 {
-    document.getElementById("navbar").classList.add('navbar-light');
-    document.getElementById("navbar").classList.add('bg-primary');
-    document.getElementById("navbar").classList.remove('navbar-dark');
+    document.getElementById("navbar").classList.add('bg-light');
     document.getElementById("navbar").classList.remove('bg-dark');
+    document.getElementById("tableheaders").classList.remove('text-dark');
+    document.getElementById("tableheaders").classList.add('text-light');
+
+    document.getElementById("tasklisttable").classList.remove('bg-dark');
+    document.getElementById("tasklisttable").classList.add('bg-light');
+
+    
+    document.getElementById("taskslists").classList.add('text-dark');
+    document.getElementById("taskslists").classList.remove('text-light');
+
 }
 
 

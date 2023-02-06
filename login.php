@@ -100,6 +100,7 @@ ob_end_flush();
 <button type="reset" class="btn btn-danger">Clear</button>
 </nav>
 </form>
-<script src = 'loginscript.js' type="text/javascript"></script>
+<script language="JavaScript" src="./loginscript.js?n=1"></script>
+
 
 <?php include ('includes/footer.php'); ?>
